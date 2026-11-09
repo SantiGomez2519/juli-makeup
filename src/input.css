@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-principal: #F9EBEA;
+  --rosarito-dinamico: #F4C2C2;
+  --rosa-acento: #9E5B5B;
+  --rosa-profundo: #7A3B3B;
+  --blanco-hueso: #FCF9F9;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-principal);
+  color: #4A3B3B;
+}
+
+.font-serif-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-rosarito { background-color: var(--rosarito-dinamico); }
+.bg-blanco-hueso { background-color: var(--blanco-hueso); }
+.text-acento { color: var(--rosa-acento); }
+.text-profundo { color: var(--rosa-profundo); }
+.border-acento { border-color: rgba(158, 91, 91, 0.2); }
+
+.btn-rosarito {
+  background-color: var(--rosarito-dinamico);
+  color: var(--rosa-profundo);
+  transition: all 0.3s ease;
+}
+.btn-rosarito:hover {
+  background-color: #e8a9a9;
+  transform: translateY(-2px);
+}
+.btn-blanco {
+  background-color: var(--blanco-hueso);
+  color: var(--rosa-profundo);
+  border: 1px solid rgba(158, 91, 91, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-blanco:hover {
+  background-color: var(--rosarito-dinamico);
+  transform: translateY(-2px);
+}
+
+/* Estilos del Carrusel */
+.carousel-container {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel-item {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+.carousel-dot.active {
+  background-color: var(--rosa-profundo);
+  width: 1.5rem;
+}
