@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julieta Camacho | Maquilladora Profesional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-principal: #F9EBEA;
+      --rosarito-dinamico: #F4C2C2;
+      --rosa-acento: #9E5B5B;
+      --rosa-profundo: #7A3B3B;
+      --blanco-hueso: #FCF9F9;
+    }
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background-color: var(--bg-principal); 
+      color: #4A3B3B;
+    }
+    .font-serif-title { 
+      font-family: 'Playfair Display', serif; 
+    }
+    .bg-rosarito { background-color: var(--rosarito-dinamico); }
+    .bg-blanco-hueso { background-color: var(--blanco-hueso); }
+    .text-acento { color: var(--rosa-acento); }
+    .text-profundo { color: var(--rosa-profundo); }
+    .border-acento { border-color: rgba(158, 91, 91, 0.2); }
+    
+    .btn-rosarito {
+      background-color: var(--rosarito-dinamico);
+      color: var(--rosa-profundo);
+      transition: all 0.3s ease;
+    }
+    .btn-rosarito:hover {
+      background-color: #e8a9a9;
+      transform: translateY(-2px);
+    }
+    .btn-blanco {
+      background-color: var(--blanco-hueso);
+      color: var(--rosa-profundo);
+      border: 1px solid rgba(158, 91, 91, 0.3);
+      transition: all 0.3s ease;
+    }
+    .btn-blanco:hover {
+      background-color: var(--rosarito-dinamico);
+      transform: translateY(-2px);
+    }
+
+    /* Estilos del Carrusel */
+    .carousel-container {
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .carousel-item {
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+    .carousel-dot.active {
+      background-color: var(--rosa-profundo);
+      width: 1.5rem;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen pb-12">
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="sticky top-0 z-50 bg-blanco-hueso/90 backdrop-blur-md border-b border-acento shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-rosarito flex items-center justify-center p-1 border border-acento shadow-sm">
+          <svg viewBox="0 0 100 100" class="w-full h-full text-profundo fill-current">
+            <path d="M30,50 Q10,20 40,30 Q50,10 60,30 Q90,20 70,50 Q90,80 60,70 Q50,90 40,70 Q10,80 30,50 Z" opacity="0.3"/>
+            <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="34" font-weight="bold">J</text>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-serif-title font-bold text-xl text-profundo leading-none tracking-wide">Juli Makeup</h1>
+          <p class="text-[10px] tracking-widest text-acento font-semibold uppercase mt-0.5">Maquilladora Profesional</p>
+        </div>
+      </div>
+
+      <!-- BOTONES SUPERIORES: WHATSAPP + ÍCONO DE INSTAGRAM -->
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/573508158434?text=Hola%2C%20quisiera%20información%20sobre%20tus%20servicios%20de%20maquillaje%20y%20disponibilidad" target="_blank" class="btn-rosarito font-bold text-xs px-5 py-2.5 rounded-full shadow-sm flex items-center gap-2">
+          <i class="fab fa-whatsapp text-sm"></i> Agendar Cita
+        </a>
+        <a href="https://www.instagram.com/juli_makeup.1?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram @juli_makeup.1" class="btn-blanco w-9 h-9 rounded-full flex items-center justify-center shadow-sm text-profundo hover:text-acento transition">
+          <i class="fab fa-instagram text-base"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-6xl mx-auto px-4 mt-8 space-y-12">
+    
+    <!-- SECCIÓN HERO CON TU FOTO -->
+    <div class="bg-blanco-hueso rounded-3xl p-6 md:p-10 border border-acento shadow-sm relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
+      
+      <div class="space-y-4 md:w-3/5">
+        <h2 class="font-serif-title text-4xl md:text-6xl font-bold text-profundo leading-tight">
+          Julieta Camacho
+        </h2>
+        <p class="text-sm md:text-base font-semibold text-acento tracking-wide uppercase">
+          Maquilladora Profesional
+        </p>
+
+        <!-- TEXTO PERSONALIZADO -->
+        <p class="text-xs md:text-sm text-gray-700 leading-relaxed pt-1">
+          Mi pasión por el maquillaje se refleja en cada detalle. Busco realzar tu belleza natural y crear looks que te hagan sentir auténtica, radiante y segura.
+        </p>
+
+        <!-- BOTONES -->
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="https://wa.me/573508158434?text=Hola%2C%20quisiera%20información%20sobre%20tus%20servicios%20de%20maquillaje%20y%20disponibilidad" target="_blank" class="btn-rosarito font-bold text-xs px-6 py-3 rounded-full shadow-md flex items-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Agendar por WhatsApp
+          </a>
+          <a href="https://www.instagram.com/juli_makeup.1?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank" class="btn-blanco font-bold text-xs px-6 py-3 rounded-full shadow-sm flex items-center gap-2">
+            <i class="fab fa-instagram text-sm"></i> Explora mi trabajo en Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- FOTO REAL -->
+      <div class="md:w-2/5 flex justify-center">
+        <div class="relative p-2 rounded-3xl bg-rosarito shadow-md">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczO23q8X2aJ-qN2d-1vJ_Jp" alt="Julieta Camacho - Maquilladora Profesional" class="rounded-2xl object-cover h-80 w-64 shadow-inner">
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DE PAQUETES CON SLIDER / CARRUSEL INTERACTIVO -->
+    <div id="paquetes" class="space-y-6">
+      <div class="text-center max-w-xl mx-auto">
+        <h3 class="font-serif-title text-3xl font-bold text-profundo">Paquetes y Tarifas</h3>
+        <p class="text-xs text-acento mt-1">Desliza para explorar cada uno de nuestros servicios de maquillaje</p>
+      </div>
+
+      <!-- CARROUSEL CONTAINER -->
+      <div class="relative max-w-4xl mx-auto px-4 md:px-12">
+        
+        <!-- Flechas de navegación -->
+        <button onclick="moverSlide(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 btn-blanco w-10 h-10 rounded-full flex items-center justify-center shadow-md text-profundo hover:scale-105 transition">
+          <i class="fas fa-chevron-left text-sm"></i>
+        </button>
+        
+        <button onclick="moverSlide(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 btn-blanco w-10 h-10 rounded-full flex items-center justify-center shadow-md text-profundo hover:scale-105 transition">
+          <i class="fas fa-chevron-right text-sm"></i>
+        </button>
+
+        <!-- Slides Scrollable Wrapper -->
+        <div id="sliderWrapper" class="carousel-container flex gap-6 overflow-x-auto py-4 px-2">
+          
+          <!-- SLIDE 1: Maquillaje + Peinado de Ondas -->
+          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Maquillaje + Peinado de Ondas" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Completo
+              </span>
+              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+                <span class="font-serif-title text-xl font-bold text-profundo">$150.000</span>
+              </div>
+            </div>
+            
+            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje + Peinado de Ondas</h4>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Look integral sofisticado. Incluye preparación de piel intensiva, maquillaje social radiante de larga duración y estilizado de peinado con ondas elegantes.
+                </p>
+              </div>
+              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20el%20paquete%20de%20Maquillaje%20%2B%20Peinado%20de%20Ondas" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+                Reservar
+              </a>
+            </div>
+          </div>
+
+          <!-- SLIDE 2: Maquillaje Social -->
+          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Social" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Social
+              </span>
+              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+                <span class="font-serif-title text-xl font-bold text-profundo">$100.000</span>
+              </div>
+            </div>
+            
+            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje Social</h4>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Perfecto para graduaciones, eventos de noche, cenas o invitadas de boda. Resalta tu rostro con una piel impecable y ojos expresivos de larga duración.
+                </p>
+              </div>
+              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20Social" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+                Reservar
+              </a>
+            </div>
+          </div>
+
+          <!-- SLIDE 3: Maquillaje Quinceañera -->
+          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Quinceañera" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Quinceañeras
+              </span>
+              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+                <span class="font-serif-title text-xl font-bold text-profundo">$130.000</span>
+              </div>
+            </div>
+            
+            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje Quinceañera</h4>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Diseñado especialmente para proyectar la frescura, dulzura y elegancia de la quinceañera. Técnicas suaves y luminosas para lucir radiante en tu gran noche.
+                </p>
+              </div>
+              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Quinceañera" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+                Reservar
+              </a>
+            </div>
+          </div>
+
+          <!-- SLIDE 4: Maquillaje de Novia -->
+          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80" alt="Maquillaje de Novia" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                Novias
+              </span>
+              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+                <span class="font-serif-title text-xl font-bold text-profundo">$160.000</span>
+              </div>
+            </div>
+            
+            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje de Novia</h4>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Servicio de alta gama exclusivo para novias. Incluye preparación intensiva de piel (skincare), técnica blindada a prueba de agua y lágrimas, pestañas y kit de retoque.
+                </p>
+              </div>
+              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Novia" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+                Reservar
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Indicadores / Dots del carrusel -->
+        <div class="flex justify-center items-center gap-2 mt-4">
+          <button onclick="irASlide(0)" class="carousel-dot active w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
+          <button onclick="irASlide(1)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
+          <button onclick="irASlide(2)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
+          <button onclick="irASlide(3)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PIE DE PÁGINA CON BOTONCITOS DE CONTACTO -->
+  <footer class="mt-16 bg-blanco-hueso border-t border-acento py-8 text-center text-xs text-gray-600">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <p class="font-serif-title text-lg font-bold text-profundo">Juli Makeup</p>
+      
+      <!-- BOTONCITOS DE CONTACTO -->
+      <div class="flex justify-center items-center gap-3 pt-2">
+        <a href="https://wa.me/573508158434?text=Hola%2C%20quisiera%20información%20sobre%20tus%20servicios%20de%20maquillaje%20y%20disponibilidad" target="_blank" class="btn-rosarito text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+          <i class="fab fa-whatsapp"></i> 3508158434
+        </a>
+        <a href="https://www.instagram.com/juli_makeup.1?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank" class="btn-blanco text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+          <i class="fab fa-instagram"></i> @juli_makeup.1
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LÓGICA DE CONTROL DEL CARRUSEL -->
+  <script>
+    const slider = document.getElementById('sliderWrapper');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function moverSlide(direccion) {
+      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24; // ancho + gap
+      slider.scrollBy({ left: direccion * slideWidth, behavior: 'smooth' });
+    }
+
+    function irASlide(index) {
+      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24;
+      slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+    }
+
+    slider.addEventListener('scroll', () => {
+      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24;
+      const indexActual = Math.round(slider.scrollLeft / slideWidth);
+      
+      dots.forEach((dot, idx) => {
+        if (idx === indexActual) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
