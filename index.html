@@ -73,144 +73,124 @@
       <!-- FOTO REAL -->
       <div class="md:w-2/5 flex justify-center">
         <div class="relative p-2 rounded-3xl bg-rosarito shadow-md">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczO23q8X2aJ-qN2d-1vJ_Jp" alt="Julieta Camacho - Maquilladora Profesional" class="rounded-2xl object-cover h-80 w-64 shadow-inner">
+          <img src="./media/quiensoy.webp" alt="Julieta Camacho - Maquilladora Profesional" class="rounded-2xl object-cover h-80 w-64 shadow-inner">
         </div>
       </div>
     </div>
 
-    <!-- SECCIÓN DE PAQUETES CON SLIDER / CARRUSEL INTERACTIVO -->
-    <div id="paquetes" class="space-y-6">
+    <!-- SECCIÓN DE PAQUETES EN GRID -->
+    <div id="paquetes" class="space-y-8">
       <div class="text-center max-w-xl mx-auto">
-        <h3 class="font-serif-title text-3xl font-bold text-profundo">Paquetes y Tarifas</h3>
-        <p class="text-xs text-acento mt-1">Desliza para explorar cada uno de nuestros servicios de maquillaje</p>
+        <h3 class="font-serif-title text-3xl md:text-4xl font-bold text-profundo">Paquetes y Tarifas</h3>
+        <p class="text-sm text-acento mt-2">Explora cada uno de nuestros servicios de maquillaje</p>
       </div>
 
-      <!-- CARROUSEL CONTAINER -->
-      <div class="relative max-w-4xl mx-auto px-4 md:px-12">
-        
-        <!-- Flechas de navegación -->
-        <button onclick="moverSlide(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 btn-blanco w-10 h-10 rounded-full flex items-center justify-center shadow-md text-profundo hover:scale-105 transition">
-          <i class="fas fa-chevron-left text-sm"></i>
-        </button>
-        
-        <button onclick="moverSlide(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 btn-blanco w-10 h-10 rounded-full flex items-center justify-center shadow-md text-profundo hover:scale-105 transition">
-          <i class="fas fa-chevron-right text-sm"></i>
-        </button>
+      <!-- GRID DE PAQUETES -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Slides Scrollable Wrapper -->
-        <div id="sliderWrapper" class="carousel-container flex gap-6 overflow-x-auto py-4 px-2">
-          
-          <!-- SLIDE 1: Maquillaje + Peinado de Ondas -->
-          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
-            <div class="relative h-64 w-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Maquillaje + Peinado de Ondas" class="w-full h-full object-cover">
-              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Completo
-              </span>
-              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
-                <span class="font-serif-title text-xl font-bold text-profundo">$150.000</span>
-              </div>
-            </div>
-            
-            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje + Peinado de Ondas</h4>
-                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                  Look integral sofisticado. Incluye preparación de piel intensiva, maquillaje social radiante de larga duración y estilizado de peinado con ondas elegantes.
-                </p>
-              </div>
-              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20el%20paquete%20de%20Maquillaje%20%2B%20Peinado%20de%20Ondas" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
-                Reservar
-              </a>
+        <!-- PAQUETE 1: Maquillaje + Peinado de Ondas -->
+        <div class="bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="./media/maquillajemasondas.webp" alt="Maquillaje + Peinado de Ondas" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Completo
+            </span>
+            <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+              <span class="font-serif-title text-lg font-bold text-profundo">$150.000</span>
             </div>
           </div>
-
-          <!-- SLIDE 2: Maquillaje Social -->
-          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
-            <div class="relative h-64 w-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Social" class="w-full h-full object-cover">
-              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Social
-              </span>
-              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
-                <span class="font-serif-title text-xl font-bold text-profundo">$100.000</span>
-              </div>
-            </div>
-            
-            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje Social</h4>
-                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                  Perfecto para graduaciones, eventos de noche, cenas o invitadas de boda. Resalta tu rostro con una piel impecable y ojos expresivos de larga duración.
-                </p>
-              </div>
-              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20Social" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
-                Reservar
-              </a>
-            </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h4 class="font-serif-title text-xl font-bold text-profundo">Maquillaje + Peinado de Ondas</h4>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed flex-1">
+              Look integral sofisticado. Incluye preparación de piel intensiva, maquillaje social radiante de larga duración y estilizado de peinado con ondas elegantes.
+            </p>
+            <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20el%20paquete%20de%20Maquillaje%20%2B%20Peinado%20de%20Ondas" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+              Reservar
+            </a>
           </div>
-
-          <!-- SLIDE 3: Maquillaje Quinceañera -->
-          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
-            <div class="relative h-64 w-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Quinceañera" class="w-full h-full object-cover">
-              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Quinceañeras
-              </span>
-              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
-                <span class="font-serif-title text-xl font-bold text-profundo">$130.000</span>
-              </div>
-            </div>
-            
-            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje Quinceañera</h4>
-                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                  Diseñado especialmente para proyectar la frescura, dulzura y elegancia de la quinceañera. Técnicas suaves y luminosas para lucir radiante en tu gran noche.
-                </p>
-              </div>
-              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Quinceañera" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
-                Reservar
-              </a>
-            </div>
-          </div>
-
-          <!-- SLIDE 4: Maquillaje de Novia -->
-          <div class="carousel-item w-full md:w-[460px] bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col justify-between">
-            <div class="relative h-64 w-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80" alt="Maquillaje de Novia" class="w-full h-full object-cover">
-              <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                Novias
-              </span>
-              <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
-                <span class="font-serif-title text-xl font-bold text-profundo">$160.000</span>
-              </div>
-            </div>
-            
-            <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="font-serif-title text-2xl font-bold text-profundo">Maquillaje de Novia</h4>
-                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                  Servicio de alta gama exclusivo para novias. Incluye preparación intensiva de piel (skincare), técnica blindada a prueba de agua y lágrimas, pestañas y kit de retoque.
-                </p>
-              </div>
-              <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Novia" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
-                Reservar
-              </a>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Indicadores / Dots del carrusel -->
-        <div class="flex justify-center items-center gap-2 mt-4">
-          <button onclick="irASlide(0)" class="carousel-dot active w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
-          <button onclick="irASlide(1)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
-          <button onclick="irASlide(2)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
-          <button onclick="irASlide(3)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-acento/40 transition-all"></button>
+        <!-- PAQUETE 2: Maquillaje Social -->
+        <div class="bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="./media/social.webp" alt="Maquillaje Social" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Social
+            </span>
+            <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+              <span class="font-serif-title text-lg font-bold text-profundo">$100.000</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h4 class="font-serif-title text-xl font-bold text-profundo">Maquillaje Social</h4>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed flex-1">
+              Perfecto para graduaciones, eventos de noche, cenas o invitadas de boda. Resalta tu rostro con una piel impecable y ojos expresivos de larga duración.
+            </p>
+            <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20Social" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+              Reservar
+            </a>
+          </div>
+        </div>
+
+        <!-- PAQUETE 3: Maquillaje Quinceañera -->
+        <div class="bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="./media/quinceanos.webp" alt="Maquillaje Quinceañera" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Quinceañeras
+            </span>
+            <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+              <span class="font-serif-title text-lg font-bold text-profundo">$130.000</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h4 class="font-serif-title text-xl font-bold text-profundo">Maquillaje Quinceañera</h4>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed flex-1">
+              Diseñado especialmente para proyectar la frescura, dulzura y elegancia de la quinceañera. Técnicas suaves y luminosas para lucir radiante en tu gran noche.
+            </p>
+            <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Quinceañera" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+              Reservar
+            </a>
+          </div>
+        </div>
+
+        <!-- PAQUETE 4: Maquillaje de Novia -->
+        <div class="bg-blanco-hueso rounded-3xl border border-acento shadow-md overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative h-56 w-full overflow-hidden">
+            <img src="./media/novia.webp" alt="Maquillaje de Novia" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-rosarito text-profundo text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Novias
+            </span>
+            <div class="absolute bottom-4 right-4 bg-blanco-hueso/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-acento">
+              <span class="font-serif-title text-lg font-bold text-profundo">$160.000</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h4 class="font-serif-title text-xl font-bold text-profundo">Maquillaje de Novia</h4>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed flex-1">
+              Servicio de alta gama exclusivo para novias. Incluye preparación intensiva de piel (skincare), técnica blindada a prueba de agua y lágrimas, pestañas y kit de retoque.
+            </p>
+            <a href="https://wa.me/573508158434?text=Hola%20Juli,%20quisiera%20agendar%20un%20Maquillaje%20de%20Novia" target="_blank" class="btn-rosarito w-full font-bold text-xs py-3 rounded-xl text-center shadow-sm block mt-4">
+              Reservar
+            </a>
+          </div>
         </div>
 
       </div>
+    </div>
+
+    <!-- SECCIÓN SERVICIO A DOMICILIO -->
+    <div class="bg-blanco-hueso rounded-3xl p-8 md:p-10 border border-acento shadow-sm text-center max-w-2xl mx-auto">
+      <div class="w-14 h-14 rounded-full bg-rosarito flex items-center justify-center mx-auto mb-4 border border-acento shadow-sm">
+        <i class="fas fa-car-side text-profundo text-xl"></i>
+      </div>
+      <h3 class="font-serif-title text-2xl font-bold text-profundo">Servicio a Domicilio</h3>
+      <p class="text-sm text-gray-700 leading-relaxed mt-3 max-w-md mx-auto">
+        Ofrezco servicio a domicilio en Medellín y el área metropolitana.
+      </p>
+      <p class="text-xs text-acento mt-1">
+        El costo adicional varía según la ubicación.
+      </p>
     </div>
 
   </main>
@@ -231,35 +211,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- LÓGICA DE CONTROL DEL CARRUSEL -->
-  <script>
-    const slider = document.getElementById('sliderWrapper');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    function moverSlide(direccion) {
-      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24; // ancho + gap
-      slider.scrollBy({ left: direccion * slideWidth, behavior: 'smooth' });
-    }
-
-    function irASlide(index) {
-      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24;
-      slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
-    }
-
-    slider.addEventListener('scroll', () => {
-      const slideWidth = slider.querySelector('.carousel-item').offsetWidth + 24;
-      const indexActual = Math.round(slider.scrollLeft / slideWidth);
-      
-      dots.forEach((dot, idx) => {
-        if (idx === indexActual) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>

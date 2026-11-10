@@ -45,25 +45,3 @@ body {
   background-color: var(--rosarito-dinamico);
   transform: translateY(-2px);
 }
-
-/* Estilos del Carrusel */
-.carousel-container {
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-.carousel-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.carousel-item {
-  scroll-snap-align: center;
-  flex-shrink: 0;
-}
-.carousel-dot.active {
-  background-color: var(--rosa-profundo);
-  width: 1.5rem;
-}
